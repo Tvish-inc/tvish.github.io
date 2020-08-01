@@ -40,3 +40,19 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+// When the user clicks on div, open the popup
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+  setTimeout(function(){
+    popup.classList.toggle("show");
+  }, 1000)
+
+}
